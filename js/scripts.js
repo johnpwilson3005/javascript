@@ -130,3 +130,44 @@
 // myNum *= 5;
 // myNum /= 12;
 // console.log(myNum);
+
+
+// Day 3 takehome
+const userName = prompt('What is your name?:')
+const userColor = prompt('What is you favorite color? red, orange, yellow, green, blue, pink, purple, black, white, or grey:');
+switch (userColor) {
+  case 'red':
+    console.log(userName + ', your favorite color is red');
+    break;
+  case 'orange':
+    console.log(userName + ', your favorite color is orange');
+    break;
+  case 'yellow':
+    console.log(userName + ', your favorite color is yellow');
+    break;
+  case 'green':
+    console.log(userName + ', your favorite color is green');
+    break;
+  case 'blue':
+    console.log(userName + ', your favorite color is blue');
+    break;
+  case 'pink':
+    console.log(userName + ', your favorite color is pink');
+    break;
+  case 'purple':
+    console.log(userName + ', your favorite color is purple');
+    break;
+  case 'black':
+    console.log(userName + ', favorite your color is black');
+    break;
+  case 'white':
+    console.log(userName + ', your favorite color is white');
+    break;
+  case 'grey':
+    console.log(userName + ', your favorite color is grey');
+    break;
+  default:
+    console.log(userName + ', I do not like that color, it is unacceptable');
+}
+
+alert(userName + ', your favorite color is ' + userColor);

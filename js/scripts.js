@@ -109,12 +109,17 @@
 // }
 // movieYears.push(myFavoriteMovies[0][1], myFavoriteMovies[1][1], myFavoriteMovies[2][1]);
 // console.log(movieYears);
+let max = 60;
+let min = 0;
+
 let toDo = [];
-let first = prompt('what do you need to do today?:');
-let second = prompt('what else do you need to do today?:');
-let third = prompt('what is the last thing you need to do this weekend?:');
-toDo.push(first, second, third);
-for (var i = 0; i < toDo.length; i++) {
-  toDo.push(Math.floor(Math.random() * 10));
+let prompts = ['What do you need to do today?:', 'What else do you need to do today?:', 'What is the final thing you would like to do today?:'];
+
+for (let i = 0; i < toDo.length; i++) {
+  let res = prompt(prompts[i]);
+  toDo.push({
+    response: res,
+    randomMath: Math.floor(Math.random() * (max - min + 1)) + min
+  });
 }
 console.log(toDo);

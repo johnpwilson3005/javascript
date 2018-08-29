@@ -245,8 +245,9 @@
 // alert(squarePower(aNumber));
 // great suceess! very happy!
 
-let string = [];
-var lower = 'this is the string with a capital in the front and a period at the end';
-var upper = lower.charAt(0).toUpperCase() + lower.substr(1);
-string.push(upper);
-alert (`${string}.`);
+// let string = [];
+// var lower = 'this is the string with a capital in the front and a period at the end';
+// var upper = lower.charAt(0).toUpperCase() + lower.substr(1);
+// string.push(upper);
+// alert (`${string}.`);
+// not a function but it was part of the homework and it worked

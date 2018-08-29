@@ -227,3 +227,26 @@
 //
 // let dogAge = prompt("How old is your dog?", "10");
 // alert(calculateDogYears(dogAge));
+
+
+// function squarePower(aNumber) {
+//   let parsed = parseInt(aNumber);
+//   if (!isNaN(parsed)) {
+//     return aNumber * aNumber;
+//   } else {
+//     alert("NaN");
+//     let newAnswer = prompt("No really, any number, but it has to be a number!:", "50");
+//     squarePower(newAnswer);
+//     return newAnswer * newAnswer;
+//   }
+// };
+//
+// let aNumber = prompt("Give me a number and I will square the number for you:", "4");
+// alert(squarePower(aNumber));
+// great suceess! very happy!
+
+let string = [];
+var lower = 'this is the string with a capital in the front and a period at the end';
+var upper = lower.charAt(0).toUpperCase() + lower.substr(1);
+string.push(upper);
+alert (`${string}.`);

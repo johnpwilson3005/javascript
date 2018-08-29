@@ -109,17 +109,121 @@
 // }
 // movieYears.push(myFavoriteMovies[0][1], myFavoriteMovies[1][1], myFavoriteMovies[2][1]);
 // console.log(movieYears);
-let max = 60;
-let min = 0;
+// let max = 60;
+// let min = 0;
+//
+// let toDo = [];
+// let prompts = ['What do you need to do today?:', 'What else do you need to do today?:', 'What is the final thing you would like to do today?:'];
+//
+// for (let i = 0; i < toDo.length; i++) {
+//   let res = prompt(prompts[i]);
+//   toDo.push({
+//     response: res,
+//     randomMath: Math.floor(Math.random() * (max - min + 1)) + min
+//   });
+// }
+// console.log(toDo);
+// Day 4 takehome done by Reiker
+// let todos = [];
+// let todo1 = prompt("Hey there, what you doing?:", "Eat Cheese.");
+// let todo2 = prompt("Hey there, what else you doing?:", "Eat Donuts");
+// let todo3 = prompt("Hey there, what else you doing?:", "Drinking Milk");
+//
+//
+// let todoOneArray = [todo1];
+// let todoTwoArray = [todo2];
+// let todoThreeArray = [todo3];
+//
+// todos.push(todoOneArray, todoTwoArray, todoThreeArray);
+//
+// for (let i = 0; i < todos.length; i++) {
+//   let timeFrame = prompt(`How long should ${todos[i][0]} take? (please provide in hours)`, "1");
+//   let transformed = parseInt(timeFrame);
+//   if (!isNaN(transformed)) {
+//   todos[i].push(transformed);
+// } else {
+//   todos[i].push(1);
+// };
+// }
+//
+// let n = 0;
+// let max = 0;
+// while (n < todos.length) {
+//   if(max < todos[n][1]) {
+//     max = todos[n][1];
+//   }
+//   n++;
+// }
+//
+// let m = 0
+// do {
+//   if(todos[m][1] === max) {
+//     console.log(todos[m]);
+//   } else {
+//     todos[m].push("easy-peasy");
+//     alert(todos[m]);
+//   }
+//   m++
+// } while(m < todos.length)
 
-let toDo = [];
-let prompts = ['What do you need to do today?:', 'What else do you need to do today?:', 'What is the final thing you would like to do today?:'];
+// isNaN() tels you if a variable is Not A NUMBER
+// day 5 functions
+// example
+// function(name, age) {
+//   return `My name is ${name} and I am ${age} years old`;
+// }
+// function getTodos(question) {
+//   todos.push(prompt(question));
+// };FUNCTION DEFINITION
 
-for (let i = 0; i < toDo.length; i++) {
-  let res = prompt(prompts[i]);
-  toDo.push({
-    response: res,
-    randomMath: Math.floor(Math.random() * (max - min + 1)) + min
-  });
-}
-console.log(toDo);
+// getTodos('Whats the first thing you want to do?');
+// Function call site
+// getTodos('Whats the next thing you want to do?');
+// Function call site
+// getTodos('Whats the last thing you want to do?');
+// Function call site
+
+// let todos = [];
+//
+// function gettodos(question) {
+//   todos.push(prompt(question));
+// };
+//
+// nameThatBand('Coldplay');
+//
+// function nameThatBand(bandName) {
+//   return alert(`${bandName} is overrated`);
+// };
+
+// "fat" Arrow functions
+// () => (); // pointless but basic form
+// () => {// arrow function that takes 0 arguments and perform data manipulation
+//   incrementor++
+//   if(incrementor < 5) {
+//     sayGoodbye();
+//   }
+// };
+
+// (pasta) => {// take 1 argument, can have parenthissi or not and alert a string
+//   alert(`My favorite pasta is ${pasta}!`);
+// };
+
+// pasta => (pasta.toUpperCase());// if an arrow statement has parenthsis istead of curly brackets then it is immediately returning something
+//
+// (car, house) => {
+//   //call an api to save this data...
+//   return `The returned info is ${data}`;
+// }
+
+// function calculateDogYears(age) {
+//   let parsed = parseInt(age);
+//   if(!isNaN(parsed)) {
+//     return age * 7;
+//   } else {
+//     let newAnswer = prompt("come on! I said a NUMBER of years!", "1");
+//     calculateDogYears(newAnswer);
+//   }
+// };
+//
+// let dogAge = prompt("How old is your dog?", "10");
+// alert(calculateDogYears(dogAge));

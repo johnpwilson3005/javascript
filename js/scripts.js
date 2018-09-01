@@ -251,3 +251,60 @@
 // string.push(upper);
 // alert (`${string}.`);
 // not a function but it was part of the homework and it worked
+
+// Day 6
+// rules of a method: has to return some type of value; always attached to an object; implicitely comsumes the object.
+// the DOM is an api
+// let pTags = document.getElementsByTagName("p");
+// let specialPTag = document.getElementsByClassName("my-special-p-tag");
+// let idPTag = document.getElementById("this-p-tag");
+// let h1Tags = document.querySelectorAll("h1");
+// let queryPTags = document.querySelectorAll(".my-special-p-tag");
+// let idPTag = document.querySelectorAll("#this-p-tag");
+// document.querySelector(".text-danger");
+
+
+// function queryTheDom(method, element) {
+//   let result;
+//   switch(method) {
+//     case "getElementsByTagName":
+//       result = document.getElementsByTagName(element);
+//       break;
+//     case "getElementsByClassName"
+//     result = document.getElementsByClassName(element);
+//       break;
+//     case "getElementById"
+//       result = document.getElementById(element);
+//       break;
+//     case "querySelector"
+//       result = document.querySelector(element);
+//       break;
+//     case "querySelectorAll"
+//       result = document.querySelectorAll(element);
+//       break;
+//     default:
+//       result = "sorry, that is not valid";
+//   }
+// console.log(queryTheDom);
+// }
+
+// let redDiv = document.querySelector(".red-background");
+// console.log(redDiv);
+//
+// redDiv.addEventListener("mouseover",e => {
+//
+// })
+
+function mathDegree(aFarenheit) {
+  let parsed = parseInt(aFarenheit);
+  if (!isNaN(parsed)) {
+    return (aFarenheit - 32) * (5/9);
+  } else {
+    alert("NaN");
+    let newAnswer = prompt("That is not a number, please provide any farenheit temperature", "60");
+    return (newAnswer - 32) * (5/9);
+  }
+}
+
+let aFarenheit = prompt("Give me a farenheit temperature and I will give it to you in Celcius:", "80");
+alert (mathDegree(aFarenheit));

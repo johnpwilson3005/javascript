@@ -295,16 +295,32 @@
 //
 // })
 
-function mathDegree(aFarenheit) {
-  let parsed = parseInt(aFarenheit);
-  if (!isNaN(parsed)) {
-    return (aFarenheit - 32) * (5/9);
-  } else {
-    alert("NaN");
-    let newAnswer = prompt("That is not a number, please provide any farenheit temperature", "60");
-    return (newAnswer - 32) * (5/9);
-  }
-}
+// function mathDegree(aFarenheit) {
+//   let parsed = parseInt(aFarenheit);
+//   if (!isNaN(parsed)) {
+//     return (aFarenheit - 32) * (5/9);
+//   } else {
+//     alert("NaN");
+//     let newAnswer = prompt("That is not a number, please provide any farenheit temperature", "60");
+//     MathDegree(newAnswer);
+//   }
+// };
+//
+// let aFarenheit = prompt("Give me a farenheit temperature and I will give it to you in Celcius:", "80");
+// alert (mathDegree(aFarenheit));
 
-let aFarenheit = prompt("Give me a farenheit temperature and I will give it to you in Celcius:", "80");
-alert (mathDegree(aFarenheit));
+function homework(degree, hotness) {
+  if (degree == "farenheit") {
+    return (hotness - 32) * (5/9);
+  } else {
+    return (hotness * 2) + 30;
+  }
+};
+
+let prompts = [];
+let degree = prompt("Convert farenheit or celcius:", "farenheit");
+let hotness = prompt("What numbered degree do you want to convert?:", "80");
+prompts.push(degree, hotness);
+alert(homework(degree, hotness));
+
+document.querySelector(".homework");

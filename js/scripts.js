@@ -309,18 +309,135 @@
 // let aFarenheit = prompt("Give me a farenheit temperature and I will give it to you in Celcius:", "80");
 // alert (mathDegree(aFarenheit));
 
-function homework(degree, hotness) {
-  if (degree == "farenheit") {
-    return (hotness - 32) * (5/9);
-  } else {
-    return (hotness * 2) + 30;
+// function homework(degree, hotness) {
+//   if (degree == "farenheit") {
+//     return (hotness - 32) * (5/9);
+//   } else {
+//     return (hotness * 2) + 30;
+//   }
+// };
+//
+// let prompts = [];
+// let degree = prompt("Convert farenheit or celcius:", "farenheit");
+// let hotness = prompt("What numbered degree do you want to convert?:", "80");
+// prompts.push(degree, hotness);
+// alert(homework(degree, hotness));
+//
+// document.querySelector(".homework");
+
+// Day 7
+// let text = document.getElementById("para").textContent;
+// console.log(text);
+//
+// document.getElementById("para").textContent = "This is some other text."; // this will overwrite the any text that is there.
+
+// let text = document.getElementById("para").innerHTML; // gets the whole HTML including the tags
+// console.log(text); // logs result of texts
+
+// let content = document.getElementById("content"); // creates variable for content
+// let myPTag = document.createElement("p"); // creates variable for new p tag
+// myPTag.textContent = "This is a paragraph added from the Javascript!"; // this is what we want inside our p tag
+// // content.appendChild(myPTag); // actually puts the content into the HTML
+// content.append(myPTag); // works the same as appendChild but it not supported by IE
+//
+// // creating a button and adding a class.
+// let myButton = document.createElement("button"); // sets variable for the button
+// myButton.className = "btn btn-primary"; // give the button a class
+// // myButton.classList.remove("btn-primary"); // removes a class that has already been applied
+// myButton.id = "some-id"; // gives the button an id
+// myButton.textContent = "Click me!"; // sets the text content of the button to Click me!
+// content.appendChild(myButton); //puts the button into the HTML
+//
+// // console.log(document.getElementById("some-id").classList); //retrieves the classes for a specific id
+//
+// //Using setAttributes
+// let myImg = document.createElement("img"); // creates variable to create a new image
+// myImg.setAttribute("alt", "Add attribute from JS"); // adds the alt to the img
+// myImg.setAttribute("src", "https://pbs.twimg.com/profile_images/584025370036314112/0maBx-gf_400x400.jpg"); // sets the image to be called for
+// content.appendChild(myImg); //insert the photo
+// console.log(myImg.getAttribute("src")); // just logs it, not super important
+
+// generates a page using only JS
+// const script = document.querySelector("script");
+// const body = document.querySelector("body");
+// let newP = document.createElement("p");
+// let newH1 = document.createElement("h1");
+// let newFooter = document.createElement("footer");
+// let newHeader = document.createElement("header");
+// let newUl = document.createElement("ul");
+// let newDiv = document.createElement("div");
+//
+// function createLi(classArray, linkText) {
+//   let newLink = document.createElement("li");
+//   let newA = document.createElement("a");
+//   newA.setAttribute("href", "#")
+//   newA.textContent = linkText;
+//   newLink.appendChild(newA);
+//   for (let i = 0; i < classArray.length; i++) {
+//    newLink.classList.add(classArray[i]);
+//   }
+//   newUl.appendChild(newLink);
+// };
+//
+// createLi(["pull-left"], "Home");
+// createLi(["pull-right"], "Contact");
+// createLi(["pull-right"], "About");
+//
+// newUl.classList.add("nav", "nav-pills");
+// newHeader.appendChild(newUl);
+// body.insertBefore(newHeader, script);
+//
+// function createTextElement(elementType, text) {
+//   let newElement = document.createElement(elementType);
+//   newElement.textContent = text;
+//   return newElement;
+// }
+//
+// newDiv.classList.add("text-center");
+//
+// let h1 = createTextElement("h1", "Hello World!");
+// let p = createTextElement("p", "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.");
+// newP.appendChild(p);
+// newDiv.appendChild(h1);
+// body.insertBefore(newDiv, script);
+// body.insertBefore(p, script);
+//
+// let newFooterLink = document.createElement("a");
+// newFooterLink.textContent = "Check me out.";
+// newFooter.setAttribute("href", "https://www.google.com");
+// newFooterLink.setAttribute("target", "_blank");
+// newFooterLink.classList.add("text-center", "footer");
+// newFooter.appendChild(newFooterLink);
+// body.insertBefore(newFooter, script);
+// // end of creating a page with only JS
+//
+// console.log(this);
+
+function fizzBuzz() {
+  let list = document.createElement("ol");
+  for (let i = 1; i <= 100; i++) {
+    if (i % 15 == 0) {
+      console.log("FizzBuzz");
+      let res = document.createElement("li");
+      res.textContent = "FizzBuzz"
+      list.appendChild(res);
+    } else if(i % 3 == 0) {
+      console.log("Fizz");
+      let res = document.createElement("li");
+      res.textContent = "Fizz"
+      list.appendChild(res);
+    } else if (i % 5 == 0) {
+      console.log("Buzz");
+      let res = document.createElement("li");
+      res.textContent = "Buzz"
+      list.appendChild(res);
+    } else {
+      console.log (i);
+      let res = document.createElement("li");
+      res.textContent = i;
+      list.appendChild(res);
+    }
   }
 };
 
-let prompts = [];
-let degree = prompt("Convert farenheit or celcius:", "farenheit");
-let hotness = prompt("What numbered degree do you want to convert?:", "80");
-prompts.push(degree, hotness);
-alert(homework(degree, hotness));
-
-document.querySelector(".homework");
+console.log(fizzBuzz());

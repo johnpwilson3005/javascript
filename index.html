@@ -9,17 +9,21 @@
   <link rel="stylesheet" href="css/styles.css">
 </head>
 <body class="body">
-  <div></div>
-  <!-- <h1 class="text-center">Day 7</h1>
-  <p id="para">This is <span>some</span> paragraph text.</p>
-  <div id="content"></div> -->
-  <!-- <h1>Hello World</h1> -->
-  <!-- <h3 class="homework"></h3> -->
-  <!-- <p id="this-p-tag">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Repellat, obcaecati, architecto. Optio quibusdam dicta distinctio, iste enim cupiditate quae nobis soluta commodi repellendus at esse possimus itaque facere ipsum natus!</p>
-  <p>This is some stuff</p>
-  <p class="my-special-p-tag">Some other stuff</p>
-  <p>And the last stuff</p>
-  <div class="red-background">red</div> -->
+  <div class="container-fluid">
+    <h1 class="text-center">Day-8 Forms</h1>
+    <ul id="list"></ul>
+    <form method="post" name="messageForm" action="index.html">
+      <div class="form-group">
+        <label for="message">Message:</label>
+        <input type="text" class="form-control" id="message" value="" name="msg" placeholder="Your Message">
+      </div>
+      <!-- <button class="btn btn-primary" onclick="submitForm()">Submit</button>  THIS IS BAD,  NO ON-CLICK-->
+      <input type="submit" class="btn btn-primary" value="Send">
+    </form>
+  </div>
+  <!-- <div class=" text-center col-sm-12">
+    <button class="">Click</button>
+  </div> -->
   <script src="js/scripts.js"></script>
 </body>
 </html>

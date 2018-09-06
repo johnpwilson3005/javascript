@@ -364,7 +364,7 @@
 // let newH1 = document.createElement("h1");
 // let newFooter = document.createElement("footer");
 // let newHeader = document.createElement("header");
-// let newUl = document.createElement("ul");
+let newUl = document.createElement("ul");
 // let newDiv = document.createElement("div");
 //
 // function createLi(classArray, linkText) {
@@ -413,38 +413,97 @@
 //
 // console.log(this);
 
-// function fizzBuzz() {
-//   let list = document.createElement("ol");
-//   for (let i = 1; i <= 100; i++) {
-//     if (i % 15 == 0) {
-//       console.log("FizzBuzz");
-//       let res = document.createElement("li");
-//       res.textContent = "FizzBuzz"
-//       list.appendChild(res);
-//     } else if(i % 3 == 0) {
-//       console.log("Fizz");
-//       let res = document.createElement("li");
-//       res.textContent = "Fizz"
-//       list.appendChild(res);
-//     } else if (i % 5 == 0) {
-//       console.log("Buzz");
-//       let res = document.createElement("li");
-//       res.textContent = "Buzz"
-//       list.appendChild(res);
-//     } else {
-//       console.log (i);
-//       let res = document.createElement("li");
-//       res.textContent = i;
-//       list.appendChild(res);
-//     }
-//   }
-// };
-//
-// console.log(fizzBuzz()); //logs results of fizzbuzz
-
+const script = document.querySelector("script");
 const body = document.querySelector("body");
-let content = document.getElementById("content");
-let myButton = document.createElement("button");
-myButton.classList = "btn btn-primary text-center";
-myButton.textContent = "Click!";
-body.insertBefore(myButton, scripts); // can't figure out why that didn't show up
+
+function fizzBuzz(count, val1, val2) {
+  const val3 = val1 * val2;
+  let list = document.createElement("ol");
+  for (let i = 1; i <= count; i++) {
+    let res = document.createElement("li");
+    if (i % val3 == 0) {
+      console.log("FizzBuzz");
+      res.textContent = "FizzBuzz"
+      list.appendChild(res);
+    } else if(i % val1 == 0) {
+      console.log("Fizz");
+      res.textContent = "Fizz"
+      list.appendChild(res);
+    } else if (i % val2 == 0) {
+      console.log("Buzz");
+      res.textContent = "Buzz"
+      list.appendChild(res);
+    } else {
+      console.log (i);
+      res.textContent = i;
+      list.appendChild(res);
+    }
+  }
+};
+// fizzBuzz(100, 6, 5); // inputs to pass through the fizzBuzz function
+
+// Homework attempt
+// const body = document.querySelector("body");
+// let content = document.getElementById("content");
+// let myButton = document.createElement("button");
+// myButton.classList = "btn btn-primary text-center";
+// myButton.textContent = "Click!";
+// body.insertBefore(myButton, scripts); // can't figure out why that didn't show up
+
+// Day 8 - Forms
+// let messageForm = document.forms.messageForm;
+// let message = messageForm["msg"];
+// console.log(messageForm);
+// console.log(message);
+messageForm.addEventListener("submit", e => {
+  e.preventDefault();
+  let list = document. getElementById("list");
+  let newMessage = document.createElement("li");
+  let message = e.target["msg"].value;
+  newMessage.textContent = message;
+  list.appendChild(newMessage);
+  messageForm.reset();
+  // console.log(e.target["msg"].value); //log the events target, the input value, what specifcally was typed in
+});
+
+function generateList () {
+  let fullList = [
+    "first",
+    "second",
+    "third",
+    "fourth"
+  ];
+  let list = document.getElementById("list");
+  for (var i = 0; i < fullList.length; i++) {
+    let msg = document.createElement("li");
+    msg.textContent = fullList[i];
+    msg.id = `item-${i + 1}`;
+    list.appendChild(msg);
+  }
+};
+
+
+generateList();
+
+// function submitForm() {
+//   console.log(document.getElementById("message").value);
+// } // this is BAAAAAAAAAD
+
+// var name = "John";
+// var age = 24;
+// var currentClass = "Javascript";
+// console.log(this.currentClass);
+
+function aboutMe() {
+  let me = {
+    firstName: "John",
+    lastName: "Wilson",
+    age: 24,
+    currentClass: "Javascript",
+    fullName: function () {
+      return `${this.firstName} ${this.lastName}`
+    }
+  }
+  console.log(me.fullName());
+};
+aboutMe();// function that will tell you something about me

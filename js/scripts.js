@@ -413,31 +413,38 @@
 //
 // console.log(this);
 
-function fizzBuzz() {
-  let list = document.createElement("ol");
-  for (let i = 1; i <= 100; i++) {
-    if (i % 15 == 0) {
-      console.log("FizzBuzz");
-      let res = document.createElement("li");
-      res.textContent = "FizzBuzz"
-      list.appendChild(res);
-    } else if(i % 3 == 0) {
-      console.log("Fizz");
-      let res = document.createElement("li");
-      res.textContent = "Fizz"
-      list.appendChild(res);
-    } else if (i % 5 == 0) {
-      console.log("Buzz");
-      let res = document.createElement("li");
-      res.textContent = "Buzz"
-      list.appendChild(res);
-    } else {
-      console.log (i);
-      let res = document.createElement("li");
-      res.textContent = i;
-      list.appendChild(res);
-    }
-  }
-};
+// function fizzBuzz() {
+//   let list = document.createElement("ol");
+//   for (let i = 1; i <= 100; i++) {
+//     if (i % 15 == 0) {
+//       console.log("FizzBuzz");
+//       let res = document.createElement("li");
+//       res.textContent = "FizzBuzz"
+//       list.appendChild(res);
+//     } else if(i % 3 == 0) {
+//       console.log("Fizz");
+//       let res = document.createElement("li");
+//       res.textContent = "Fizz"
+//       list.appendChild(res);
+//     } else if (i % 5 == 0) {
+//       console.log("Buzz");
+//       let res = document.createElement("li");
+//       res.textContent = "Buzz"
+//       list.appendChild(res);
+//     } else {
+//       console.log (i);
+//       let res = document.createElement("li");
+//       res.textContent = i;
+//       list.appendChild(res);
+//     }
+//   }
+// };
+//
+// console.log(fizzBuzz()); //logs results of fizzbuzz
 
-console.log(fizzBuzz());
+const body = document.querySelector("body");
+let content = document.getElementById("content");
+let myButton = document.createElement("button");
+myButton.classList = "btn btn-primary text-center";
+myButton.textContent = "Click!";
+body.insertBefore(myButton, scripts); // can't figure out why that didn't show up

@@ -364,7 +364,7 @@
 // let newH1 = document.createElement("h1");
 // let newFooter = document.createElement("footer");
 // let newHeader = document.createElement("header");
-let newUl = document.createElement("ul");
+// let newUl = document.createElement("ul");
 // let newDiv = document.createElement("div");
 //
 // function createLi(classArray, linkText) {
@@ -413,33 +413,33 @@ let newUl = document.createElement("ul");
 //
 // console.log(this);
 
-const script = document.querySelector("script");
-const body = document.querySelector("body");
+// const script = document.querySelector("script");
+// const body = document.querySelector("body");
 
-function fizzBuzz(count, val1, val2) {
-  const val3 = val1 * val2;
-  let list = document.createElement("ol");
-  for (let i = 1; i <= count; i++) {
-    let res = document.createElement("li");
-    if (i % val3 == 0) {
-      console.log("FizzBuzz");
-      res.textContent = "FizzBuzz"
-      list.appendChild(res);
-    } else if(i % val1 == 0) {
-      console.log("Fizz");
-      res.textContent = "Fizz"
-      list.appendChild(res);
-    } else if (i % val2 == 0) {
-      console.log("Buzz");
-      res.textContent = "Buzz"
-      list.appendChild(res);
-    } else {
-      console.log (i);
-      res.textContent = i;
-      list.appendChild(res);
-    }
-  }
-};
+// function fizzBuzz(count, val1, val2) {
+//   const val3 = val1 * val2;
+//   let list = document.createElement("ol");
+//   for (let i = 1; i <= count; i++) {
+//     let res = document.createElement("li");
+//     if (i % val3 == 0) {
+//       console.log("FizzBuzz");
+//       res.textContent = "FizzBuzz"
+//       list.appendChild(res);
+//     } else if(i % val1 == 0) {
+//       console.log("Fizz");
+//       res.textContent = "Fizz"
+//       list.appendChild(res);
+//     } else if (i % val2 == 0) {
+//       console.log("Buzz");
+//       res.textContent = "Buzz"
+//       list.appendChild(res);
+//     } else {
+//       console.log (i);
+//       res.textContent = i;
+//       list.appendChild(res);
+//     }
+//   }
+// };
 // fizzBuzz(100, 6, 5); // inputs to pass through the fizzBuzz function
 
 // Homework attempt
@@ -455,35 +455,35 @@ function fizzBuzz(count, val1, val2) {
 // let message = messageForm["msg"];
 // console.log(messageForm);
 // console.log(message);
-messageForm.addEventListener("submit", e => {
-  e.preventDefault();
-  let list = document. getElementById("list");
-  let newMessage = document.createElement("li");
-  let message = e.target["msg"].value;
-  newMessage.textContent = message;
-  list.appendChild(newMessage);
-  messageForm.reset();
-  // console.log(e.target["msg"].value); //log the events target, the input value, what specifcally was typed in
-});
+// messageForm.addEventListener("submit", e => {
+//   e.preventDefault();
+//   let list = document. getElementById("list");
+//   let newMessage = document.createElement("li");
+//   let message = e.target["msg"].value;
+//   newMessage.textContent = message;
+//   list.appendChild(newMessage);
+//   messageForm.reset();
+//   // console.log(e.target["msg"].value); //log the events target, the input value, what specifcally was typed in
+// });
 
-function generateList () {
-  let fullList = [
-    "first",
-    "second",
-    "third",
-    "fourth"
-  ];
-  let list = document.getElementById("list");
-  for (var i = 0; i < fullList.length; i++) {
-    let msg = document.createElement("li");
-    msg.textContent = fullList[i];
-    msg.id = `item-${i + 1}`;
-    list.appendChild(msg);
-  }
-};
-
-
-generateList();
+// function generateList () {
+//   let fullList = [
+//     "first",
+//     "second",
+//     "third",
+//     "fourth"
+//   ];
+//   let list = document.getElementById("list");
+//   for (var i = 0; i < fullList.length; i++) {
+//     let msg = document.createElement("li");
+//     msg.textContent = fullList[i];
+//     msg.id = `item-${i + 1}`;
+//     list.appendChild(msg);
+//   }
+// };
+//
+//
+// generateList();
 
 // function submitForm() {
 //   console.log(document.getElementById("message").value);
@@ -494,16 +494,71 @@ generateList();
 // var currentClass = "Javascript";
 // console.log(this.currentClass);
 
-function aboutMe() {
-  let me = {
-    firstName: "John",
-    lastName: "Wilson",
-    age: 24,
-    currentClass: "Javascript",
-    fullName: function () {
-      return `${this.firstName} ${this.lastName}`
-    }
-  }
-  console.log(me.fullName());
+// function aboutMe() {
+//   let me = {
+//     firstName: "John",
+//     lastName: "Wilson",
+//     age: 24,
+//     currentClass: "Javascript",
+//     fullName: function () {
+//       return `${this.firstName} ${this.lastName}`
+//     }
+//   }
+//   console.log(me.fullName());
+// };
+// aboutMe();// function that will tell you something about me
+
+// let string = new String('String');
+//   arrObj = new Array('String', 'next');
+//   newObj = new Object({name: 'Michael'});
+//
+// const myObj = {
+//   firstName: 'John',
+//   lastName: 'Wilson'
+// };
+//
+// console.log(string, arrObj, newObj);
+
+const user = {
+  userName: 'Bananasuit',
+  email: 'fakeemail@gmail.com',
+  password: '123abc',
 };
-aboutMe();// function that will tell you something about me
+// for constrcutors it is better to
+function User(email, userName, password) {// pass through the prompts
+  this.email = email
+  this.userName = userName
+  this.password = password
+  this.getUserName = function() {
+    console.log(this.userName);
+  }
+  this.isValidUser = function() {
+    if(this.email && this.userName && this.password) return true;
+    else return false;
+  }
+};
+
+let email = prompt('Email:');
+let userName = prompt('UserName:');
+let password = prompt('Password:');
+
+let newUser = new User(email, userName, password);
+
+// console.log(new User(email, userName, password)); // have to use new with a constructor
+
+newUser.getUserName();
+
+console.log(`This user is valid: ${newUser.isValidUser()}`);
+
+
+// console.log(myObj.lastName, myObj['lastName']); // a way to log or access an objects property; using . is easier
+
+// console.log(Object.getPrototypeOf(string));
+//
+// let objecto = {
+//   Best: "Gatorade",
+//   Worst: "Water",
+//   Average: "Tequila"
+// };
+//
+// console.log(objecto);

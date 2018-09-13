@@ -562,3 +562,97 @@ const user = {
 // };
 //
 // console.log(objecto);
+
+// day 10 classwork / localstorage / sessionstorage / strict / iife
+//Timers
+// var timer;
+// var interval;
+//
+// function delayAlert(duration) {
+//   duration = duration * 1000;
+//   timer = setTimeout(triggerAlert, duration);
+// };
+//
+// function triggerAlert() {
+//   alert('Timer Complete');
+// };
+//
+// function cancelAlert() {
+//   clearTimeout(timer);
+// };
+//
+// function intervalAlert(duration) {
+//   duration = duration * 1000;
+//   interval = setInterval(triggerAlert, duration);
+// };
+//
+// function cancelInterval() {
+//   clearInterval(interval);
+// };
+//
+//
+// document.getElementById('timer-start').addEventListener('click', function () {
+//   var time = prompt('How long would you like to wait?:');
+//   delayAlert(time);
+// });
+//
+// document.getElementById('cancel-timer').addEventListener('click', function () {
+//   cancelAlert();
+// });
+//
+// document.getElementById('interval-start').addEventListener('click', function () {
+//   var time = prompt('How often would you like this to occur?:');
+//   intervalAlert(time);
+// });
+//
+// document.getElementById('cancel-interval').addEventListener('click', function () {
+//   cancelInterval();
+// });
+
+function checkTime(i) {
+  if (i < 10) {i = "0" + i};
+  return i;
+};
+
+function displayClock() {
+  const clock = document.getElementById('clock');
+  setInterval(function () {
+    var today = new Date();
+    var hour = today.getHours();
+    var min = today.getMinutes();
+    var sec = today.getSeconds();
+    min = checkTime(min);
+    sec = checkTime(sec);
+    clock.textContent = `${hour}:${min}:${sec}`;
+  }, 1000); //this directly passes through a function that refreshes every second
+};
+
+displayClock();// end of displayClock
+// local localStorage
+
+function storeUser(username) {
+  window.localStorage.setItem('user', username);
+};
+
+document.getElementById('get-username').addEventListener('click', function () {
+  var usr = prompt('Please enter your username:');
+  storeUser(usr);
+});// store a username and look it up in the console
+
+function getUser() {
+  return window.localStorage.getItem('user');
+};
+
+document.getElementById('display-username').addEventListener('click', function () {
+  let user = document.getElementById('current-user');
+  user.textContent = getUser();
+});
+
+var number = 1;
+var getNumber = (function(x) {
+  return function() {
+    alert(x);
+  };
+}(number));
+number = 2;
+getNumber();// example of IIFE instantly Invoked Function Expression

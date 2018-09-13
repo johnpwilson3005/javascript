@@ -525,30 +525,30 @@ const user = {
   password: '123abc',
 };
 // for constrcutors it is better to
-function User(email, userName, password) {// pass through the prompts
-  this.email = email
-  this.userName = userName
-  this.password = password
-  this.getUserName = function() {
-    console.log(this.userName);
-  }
-  this.isValidUser = function() {
-    if(this.email && this.userName && this.password) return true;
-    else return false;
-  }
-};
-
-let email = prompt('Email:');
-let userName = prompt('UserName:');
-let password = prompt('Password:');
-
-let newUser = new User(email, userName, password);
-
-// console.log(new User(email, userName, password)); // have to use new with a constructor
-
-newUser.getUserName();
-
-console.log(`This user is valid: ${newUser.isValidUser()}`);
+// function User(email, userName, password) {// pass through the prompts
+//   this.email = email
+//   this.userName = userName
+//   this.password = password
+//   this.getUserName = function() {
+//     console.log(this.userName);
+//   }
+//   this.isValidUser = function() {
+//     if(this.email && this.userName && this.password) return true;
+//     else return false;
+//   }
+// };
+//
+// let email = prompt('Email:');
+// let userName = prompt('UserName:');
+// let password = prompt('Password:');
+//
+// let newUser = new User(email, userName, password);
+//
+// // console.log(new User(email, userName, password)); // have to use new with a constructor
+//
+// newUser.getUserName();
+//
+// console.log(`This user is valid: ${newUser.isValidUser()}`);
 
 
 // console.log(myObj.lastName, myObj['lastName']); // a way to log or access an objects property; using . is easier

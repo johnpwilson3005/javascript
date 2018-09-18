@@ -519,11 +519,11 @@
 //
 // console.log(string, arrObj, newObj);
 
-const user = {
-  userName: 'Bananasuit',
-  email: 'fakeemail@gmail.com',
-  password: '123abc',
-};
+// const user = {
+//   userName: 'Bananasuit',
+//   email: 'fakeemail@gmail.com',
+//   password: '123abc',
+// };
 // for constrcutors it is better to
 // function User(email, userName, password) {// pass through the prompts
 //   this.email = email
@@ -609,50 +609,52 @@ const user = {
 //   cancelInterval();
 // });
 
-function checkTime(i) {
-  if (i < 10) {i = "0" + i};
-  return i;
-};
+// function checkTime(i) {
+//   if (i < 10) {i = "0" + i};
+//   return i;
+// };
+//
+// function displayClock() {
+//   const clock = document.getElementById('clock');
+//   setInterval(function () {
+//     var today = new Date();
+//     var hour = today.getHours();
+//     var min = today.getMinutes();
+//     var sec = today.getSeconds();
+//     min = checkTime(min);
+//     sec = checkTime(sec);
+//     clock.textContent = `${hour}:${min}:${sec}`;
+//   }, 1000); //this directly passes through a function that refreshes every second
+// };
+//
+// displayClock();// end of displayClock
+// // local localStorage
+//
+// function storeUser(username) {
+//   window.localStorage.setItem('user', username);
+// };
+//
+// document.getElementById('get-username').addEventListener('click', function () {
+//   var usr = prompt('Please enter your username:');
+//   storeUser(usr);
+// });// store a username and look it up in the console
+//
+// function getUser() {
+//   return window.localStorage.getItem('user');
+// };
+//
+// document.getElementById('display-username').addEventListener('click', function () {
+//   let user = document.getElementById('current-user');
+//   user.textContent = getUser();
+// });
+//
+// var number = 1;
+// var getNumber = (function(x) {
+//   return function() {
+//     alert(x);
+//   };
+// }(number));
+// number = 2;
+// getNumber();// example of IIFE instantly Invoked Function Expression
 
-function displayClock() {
-  const clock = document.getElementById('clock');
-  setInterval(function () {
-    var today = new Date();
-    var hour = today.getHours();
-    var min = today.getMinutes();
-    var sec = today.getSeconds();
-    min = checkTime(min);
-    sec = checkTime(sec);
-    clock.textContent = `${hour}:${min}:${sec}`;
-  }, 1000); //this directly passes through a function that refreshes every second
-};
-
-displayClock();// end of displayClock
-// local localStorage
-
-function storeUser(username) {
-  window.localStorage.setItem('user', username);
-};
-
-document.getElementById('get-username').addEventListener('click', function () {
-  var usr = prompt('Please enter your username:');
-  storeUser(usr);
-});// store a username and look it up in the console
-
-function getUser() {
-  return window.localStorage.getItem('user');
-};
-
-document.getElementById('display-username').addEventListener('click', function () {
-  let user = document.getElementById('current-user');
-  user.textContent = getUser();
-});
-
-var number = 1;
-var getNumber = (function(x) {
-  return function() {
-    alert(x);
-  };
-}(number));
-number = 2;
-getNumber();// example of IIFE instantly Invoked Function Expression
+// Day 11 fetch / onjects (advanced) / js classes

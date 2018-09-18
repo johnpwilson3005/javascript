@@ -658,3 +658,38 @@
 // getNumber();// example of IIFE instantly Invoked Function Expression
 
 // Day 11 fetch / onjects (advanced) / js classes
+//api = application programming interface
+function getRepos() {
+  return fetch("https://api.github.com/users/johnpwilson3005/repos").then(data => {return data.json();
+  }).then(repos => {
+    let repoList = document.getElementById("myRepos");
+    console.log(repos[0]);
+    repos.forEach(repo => {
+        if (repo.name === "B2-Classwork") { return; }
+        let temp = document.createElement("li");
+        temp.setAttribute("class", "list-group-item");
+        let  paragraph = document.createElement("p");
+        let link = document.createElement("a");
+        paragraph.textContent = repo.name;
+        link.textContent = "View";
+        link.setAttribute("href", repo.html_url);
+        link.setAttribute("target", "_blank");
+        temp.appendChild(paragraph);
+        temp.appendChild(link);
+        repoList.appendChild(temp);
+    });
+  });
+};
+
+getRepos();
+
+class User {
+  constructor(name) {
+    this.name = name;
+  }
+  sayHello() {
+    alert(this.name);
+  }
+};
+let user = new User("Me");
+user.sayHello();
